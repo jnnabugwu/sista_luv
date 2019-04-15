@@ -1,0 +1,197 @@
+/*=====================================================================*/
+/*                           General Styles                            */
+/*=====================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font: normal 16px sans-serif;
+    color: #555;
+}
+nav, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color:#fff;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 40px 80px;
+}
+section:not(.hero):nth-child(even) {
+	background-color: #f5f5f5;
+}
+section h3.title {
+	text-transform: capitalize;
+	font: bold 32px "Open Sans", sans-serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+section p {
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* ====================================================================*/
+/*                          Header Styles                             */
+/*====================================================================*/
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+}
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+header nav {
+	display: flex;
+	margin-right: -20px;
+}
+header nav li {
+	margin-right: 30px;
+}
+header h2 {
+	font-family: "Quicksand", sans-serif;
+}
+/*=====================================================================*/
+/*                          Hero Styles                                */
+/*=====================================================================*/
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 65vh;
+	color: #fff;
+}
+
+.hero .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 65%;
+	width: 100%;
+	background-size: cover;
+	z-index: -1;
+}
+.hero h1 {
+	font: bold 55px "Open Sans", sans-serif;
+}
+.hero h3 {
+	font: normal 28px "Open Sans", sans-serif;
+}
+.hero-content-area {
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slidefade 1s forwards;
+}
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+/*=====================================================================*/
+/*                          About Us Styles                            */
+/*=====================================================================*/
+hr {
+	background-color: #B03717;
+	width: 250px;
+	height: 3px;
+	border: 0;
+	margin: 40px 0;
+}
+.about-us .grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+}
+.about-us .grid li {
+	height: 350px;
+	padding: 10px;
+	background-size: cover;
+	background-position: center;
+	background-clip: content-box;
+}
+/* need to apply width to the actual li's that contain the images to see the images */
+.about-us .grid li.small {
+	flex-basis: 35%;
+
+}
+.about-us .grid li.large {
+	flex-basis: 55%;
+}
+/*=====================================================================*/
+/*                          Calendar Styles                            */
+/*=====================================================================*/
+section .calendar-placeholder {
+	display: flex;
+	width: 900px;
+	height: 500px;
+	background-color: red;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+}
+/*RESPONSIVE MEDIA QUERIES HAVE TO BE AT THE BOTTOM OF THE CSS TO WORK*/
+/*====================================================================*/
+/*                          Responsive Design                         */
+/*====================================================================*/
+/*RESPONSIVE MEDIA QUERIES HAVE TO BE AT THE BOTTOM OF THE CSS TO WORK*/
+@media (max-width: 800px) {
+	section {
+		padding: 20px 50px;
+	}
+	header {
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 1100px) {
+	.about-us .grid li.small, .about-us .grid li.large {
+		flex-basis: 50%;
+	}
+	section .calendar-placeholder {
+		max-width: 800px;
+		max-height: 444px;
+	}
+}
+@media (max-width: 800px) {
+	.about-us .grid li.large {
+		flex-basis: 100%;
+	}
+	.about-us .grid li.small {
+		display: none;
+	}
+	section .calendar-placeholder {
+		max-width: 600px;
+		max-height: 333px;
+	}
+}
+@media (max-width: 600px) {
+	section .calendar-placeholder {
+		max-width: 300px;
+		max-height: 600px;
+	}
+}
