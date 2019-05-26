@@ -14,7 +14,7 @@ nav, ul {
 	list-style: none;
 }
 
-a {
+a, a:hover {
 	text-decoration: none;
 	color:#fff;
 }
@@ -78,15 +78,14 @@ header h2 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	min-height: 65vh;
+	min-height: 100vh;
 	color: #fff;
 }
-
 .hero .background-image {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 65%;
+	height: 100%;
 	width: 100%;
 	background-size: cover;
 	z-index: -1;
@@ -98,8 +97,13 @@ header h2 {
 	font: normal 28px "Open Sans", sans-serif;
 }
 .hero-content-area {
+	padding: 30px;
+	background-color:rgba(111, 10, 0, 0.5);
+	color: white;
+	opacity: 0.2;
+	border-radius: 10px;
 	opacity: 0;
-	margin-top: 100px;
+	margin-top: 300px;
 	animation: 1s slidefade 1s forwards;
 }
 @keyframes slidefade {
@@ -139,19 +143,79 @@ hr {
 .about-us .grid li.large {
 	flex-basis: 55%;
 }
+
 /*=====================================================================*/
-/*                          Calendar Styles                            */
+/*                          About Us Styles                            */
 /*=====================================================================*/
-section .calendar-placeholder {
+.contact form {
 	display: flex;
-	width: 900px;
-	height: 500px;
-	background-color: red;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
+	width: 60%;
+}
+.contact form a.btn {
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
 	text-align: center;
-	border-radius: 10px;
+	background-color: #CA0A00;
+	color: white;
+}
+.contact form .btn {
+	padding: 18px 42px;
+}
+.contact form input {
+	padding: 15px;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+	flex: 1;
+}
+.contact form a {
+	color: black;
+}
+/*=====================================================================*/
+/*                          Image Gallery Styles                       */
+/*=====================================================================*/
+.carousel-container {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	/* border: 5px solid black; */
+	overflow: hidden;
+	position: relative;
+}
+.carousel-slide {
+	display: flex;
+	width: 100%;
+	/* max-height: 500px; */
+}
+.carousel-slide img {
+	/* max-width: 100%; */
+	height: 500px;
+	margin: auto;
+	image-orientation: from-image;
+}
+
+#prevBtn {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	left: 5%;
+	font-size: 30px;
+	color: white;
+	/* opacity: 0.5; */
+	cursor: pointer;
+}
+#nextBtn {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	right: 5%;
+	font-size: 30px;
+	color: white;
+	/* opacity: 0.5; */
+	cursor: pointer;
 }
 /*RESPONSIVE MEDIA QUERIES HAVE TO BE AT THE BOTTOM OF THE CSS TO WORK*/
 /*====================================================================*/

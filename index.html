@@ -11,6 +11,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<!-- Style Sheets -->
 	<link rel="stylesheet" href="assets/css/index.css">
 
@@ -20,8 +22,8 @@
 		<h2><a href="index.html">Sista Luv 💜</a></h2>
 		<nav>
 			<li><a href="blog.html">Blog</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Event Calendar</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="calendar.html">Event Calendar</a></li>
 			<li><a href="#">Contact</a></li>
 		</nav>
 	</header>
@@ -48,21 +50,66 @@
 		</ul>
 	</section>
 
-	<section class="calendar">
-		<div class="calendar-placeholder">
-			THIS IS WHERE THE CALENDAR WILL BE
+	<section class="contact">
+		<h3>Learn More About Sista Luv</h3>
+		<p>Subscribe to our email list to learn more about our community events!</p>
+		<hr>
+		<form>
+			<input type="email" placeholder="Email" name="email">
+			<a href="#" class="btn">Subscribe Now</a>
+		</form>
+	</section>
+
+	<section class="image-gallery">
+		
+		<!-- <div class="carousel-wrapper">
+			<div class="carousel">
+				<img class="carousel_photo initial" src="assets/img/sistaluv_photos/carousel-1.jpg">
+				<img class="carousel_photo" src="assets/img/sistaluv_photos/carousel-2.jpg">
+				<img class="carousel_photo" src="assets/img/sistaluv_photos/carousel-3.jpg">
+				<img class="carousel_photo" src="assets/img/sistaluv_photos/carousel-4.jpg">
+
+				<div id="carousel_button--next"></div>
+				<div id="carousel_button--prev"></div>
+			</div>
+		</div> -->
+
+		<div class="carousel-container">
+				<i class="fas fa-arrow-left" id="prevBtn"></i>
+				<i class="fas fa-arrow-right" id="nextBtn"></i>
+			<div class="carousel-slide">
+				<img  src="assets/img/sistaluv_photos/carousel-4.jpg" id="lastClone">
+				<img src="assets/img/sistaluv_photos/carousel-1.jpg">
+				<img  src="assets/img/sistaluv_photos/carousel-2.jpg">
+				<img src="assets/img/sistaluv_photos/carousel-3.jpg">
+				<img  src="assets/img/sistaluv_photos/carousel-4.jpg">
+				<img src="assets/img/sistaluv_photos/carousel-1.jpg" id="firstClone">
+			</div>
+			<!-- <div class="carousel-cell">
+				<img src="assets/img/sistaluv_photos/carousel-2.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img src="assets/img/sistaluv_photos/carousel-3.jpg">
+			</div>
+			<div class="carousel-cell">
+				<img src="assets/img/sistaluv_photos/carousel-4.jpg">
+			</div> -->
 		</div>
 		
 	</section>
 
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
+<script src="assets/js/index.js"></script>
+
+
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
 <!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
 </body>
+
 </html>
