@@ -203,7 +203,7 @@ hr {
 	z-index: 10;
 	left: 5%;
 	font-size: 30px;
-	color: white;
+	color: #CA0A00;
 	/* opacity: 0.5; */
 	cursor: pointer;
 }
@@ -213,7 +213,7 @@ hr {
 	z-index: 10;
 	right: 5%;
 	font-size: 30px;
-	color: white;
+	color: #CA0A00;
 	/* opacity: 0.5; */
 	cursor: pointer;
 }
