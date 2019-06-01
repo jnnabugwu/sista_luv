@@ -4,7 +4,8 @@
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Noto+Serif|Tangerine" rel="stylesheet">
 	<!-- Styling for public area -->
-	<link rel="stylesheet" href="static/css/public_styling.css">
+    <link rel="stylesheet" href="complete-blog-php\static\css\public_styling.css">
+    <!-- <link rel="stylesheet" href="assets/css/blog.css"> -->
 	<meta charset="UTF-8">
 	<title>LifeBlog | Home </title>
 </head>
@@ -27,7 +28,7 @@
 
 		<!-- Page content -->
 		<div class="content">
-			<h2 class="content-title">Recent Articles</h2>
+			<h3 class="content-title">Recent Articles</h3>
 			<hr>
 			<!-- more content still to come here ... -->
 		</div>
