@@ -240,14 +240,22 @@ hr {
 	.about-us .grid li.large {
 		display: none;
 	}
+	hr.hide {
+		display: none;
+	}
 }
 /*=====================================================================*/
 /*                          Contact Styles                            */
 /*=====================================================================*/
-.contact form {
+
+#contact_form {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -256,7 +264,7 @@ hr {
 	        justify-content: center;
 	width: 60%;
 }
-.contact form a.btn {
+.contact form div.btn {
 	border-radius: 4px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -269,24 +277,43 @@ hr {
 }
 .contact form input {
 	padding: 15px;
-	margin-right: 30px;
 	font-size: 18px;
-	color: #555;
+	color: white;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
 }
+.contact form input[type="email"] {
+	margin-right: 30px;
+}
 .contact form a {
 	color: black;
 }
+form p {
+	margin-bottom: 0;
+}
+div.submission {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 @media (max-width: 800px) {
-	.contact h3 {
+	#contact_form h3 {
 		padding-top: 20px;
 	}
-	.contact p {
+	#contact_form p {
 		margin-bottom: 0;
 	}
-	.contact form {
+	.submission {
 		width: 60%;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
@@ -297,12 +324,11 @@ hr {
 		    -ms-flex-align: center;
 		        align-items: center;
 	}
-	.contact form input {
-		margin-bottom: 20px;
-		margin-right: 0;
+	#contact_form input {
+		margin: 10px 2px 10px 2px;
 	}
-	.contact form .btn {
-		padding: 18px 42px;
+	#contact_form .btn {
+		padding: 9px 21px;
 	}
 }
 /*=====================================================================*/
