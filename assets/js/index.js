@@ -33,18 +33,3 @@ prevBtn.addEventListener('click', function() {
     counter--;
     carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
 });
-
-// carouselSlide.addEventListener("transitionend", function() {
-//     if (carouselImages[counter].id === "lastClone") {
-//         carouselSlide.style.transform = "none";
-//         counter = carouselImages.length - 2;
-
-//         carouselSlide.style.transform = "translateX(" + (-size*counter) + "px)";
-//     }
-
-//     if (carouselImages[counter].id === "firstClone") {
-//         carouselSlide.style.transform = "none";
-//         counter = carouselImages.length - counter;
-//         carouselSlide.style.transform = "translateX(" + (-size*counter) + "px)";
-//     }
-// })
