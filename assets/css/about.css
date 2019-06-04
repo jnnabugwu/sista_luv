@@ -4,7 +4,8 @@
 * {
     margin: 0;
     padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 body {
 	/* font: normal 16px sans-serif; */
@@ -23,14 +24,27 @@ a, a:hover {
 }
 
 section {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	text-align: center;
     padding: 40px 80px;
-	flex-wrap: wrap;
-	width: 90%;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	width: 100%;
 	margin: 0 auto;
+}
+@media (max-width: 600px) {
+	section {
+		padding: 20px 0 0 0;
+	}
 }
 /* ====================================================================*/
 /*                          Header Styles                             */
@@ -39,11 +53,16 @@ header {
 	/* background-color: RGB(242, 241, 239); */
 	background-color:RGBA(226, 50, 69, 1);
 	/* background-color: #FAEE88; */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	width: 100%;
 	margin: 0 auto;
-	/* border-radius: 0 0 10px 10px; */
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 header h2 {
 	padding: 10px;
@@ -55,20 +74,41 @@ header h2 a {
 	text-decoration: none;
 }
 header nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 0 20px 0 20px;
 	padding: 10px;
 	margin-right: 60px;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 header nav li a {
 	padding: 0 10px 0 10px;
 	color: white;
-	text-decoration-color: none;
+	-webkit-text-decoration-color: none;
+	        text-decoration-color: none;
 }
 #page-header {
 	text-align: center;
 	margin-top: 50px;
+}
+@media (max-width: 600px) {
+	header {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+	header h2 {
+		margin-left: 0;
+	}
+	header nav {
+		margin-right: 0;
+	}
+	header nav li a {
+		padding: 10px;
+	}
 }
 /* ====================================================================*/
 /*                          Main Image Styles                          */
@@ -78,31 +118,49 @@ header nav li a {
 /*                          Bio Styles                                 */
 /*=====================================================================*/
 section.about {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	/* margin: 0; */
 }
 section.about div.main {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 section.about div.main img {
 	width: 100%;
 }
-section.about div.image {
-	background-image: url(../img/sistaluv.jpg);
-	height: 400px;
-	width: 100%;
-}
 section.about div.bio {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 65%;
-	margin-top: -80px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 85%;
+	margin-top: -50px;
 }
 section.about div.bio div.bio-text {
 	padding: 50px;
@@ -110,8 +168,28 @@ section.about div.bio div.bio-text {
 	margin-top: 20px;
 	background-color: #eaf3f5;
 	line-height: 40px;
-	font-size: 80%;
+	font-size: 90%;
 }
 section.about div.bio div.bio-photo img {
 	margin-top: -10px;
+}
+.acronym {
+	display: block;
+	line-height: 25px;
+	font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+	section.about div.bio {
+		margin-top: 0;
+	}
+	section.about div.bio {
+		width: 100%;
+	}
+	section.about div.bio div.bio-text {
+		padding: 50px 15px 50px 15px;
+	}
+	section.about div.bio div.bio-photo img {
+		width: 80%;
+	}	
 }
