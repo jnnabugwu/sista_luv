@@ -178,6 +178,9 @@ section.about div.bio div.bio-photo img {
 	line-height: 25px;
 	font-size: 1.2em;
 }
+.caption {
+	color: black;
+}
 
 @media (max-width: 600px) {
 	section.about div.bio {
