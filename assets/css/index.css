@@ -186,6 +186,14 @@ nav li a:hover {
 /*=====================================================================*/
 /*                          About Us Styles                            */
 /*=====================================================================*/
+section.about-us h3.title {
+	font: bold 28px "Open Sans", sans-serif;
+	margin-bottom: 15px;
+}
+section.about-us .mission {
+	margin-bottom: 0;
+}
+
 hr {
 	background-color: #B03717;
 	width: 250px;
