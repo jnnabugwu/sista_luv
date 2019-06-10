@@ -7,7 +7,19 @@ const nextBtn = document.querySelector("#nextBtn");
 
 // counter 
 let counter = 0;
-const size = (carouselImages[4].clientWidth - 50);
+
+// const size = (carouselImages[4].clientWidth - 50);
+// doesn't load well because if images load after the JS the clientWidth method returns 0
+
+const size = 617;
+
+// const image = document.getElementById("size");
+// image.addEventListener("load", function(image) {
+//   var size_2;
+//   size_2 = image.clientWidth - 50;
+//   return size_2;
+//   alert('yooo');
+// });
 
 // carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
 
